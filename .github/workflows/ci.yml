@@ -53,7 +53,7 @@ jobs:
       - name: Build QEMU
         run: |
           QEMU_TARGETS="arc-softmmu arc64-softmmu"
-          QEMU_FLAGS="--disable-werror"
+          QEMU_FLAGS=""
           # Target linux-user is only available on a Linux host
           if [ "${{ matrix.host.name }}" == "linux-x86_64" ]; then
             QEMU_TARGETS="${QEMU_TARGETS} arc-linux-user arc64-linux-user"
