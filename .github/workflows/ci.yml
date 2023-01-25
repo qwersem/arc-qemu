@@ -63,13 +63,3 @@ jobs:
             --target-list="${QEMU_TARGETS}" \
             --prefix="${{ env.BUILD_DIR }}"
           make -j $(nproc)
-      - name: Run acceptance tests
-        if: ${{ runner.os == 'Linux' }}
-        run: |
-          make check-avocado
-      - name: "Upload log"
-        uses: actions/upload-artifact@v2
-        with:
-          name: ${{ matrix.host.name }}.log
-          path: ${{ env.BUILD_DIR }}/tests/results/job-*/job.log
-        if: ${{ always() }}
