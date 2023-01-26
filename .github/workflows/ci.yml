@@ -64,8 +64,8 @@ jobs:
 
       - name: Tar artifacts
         run: |
-          tar --exclude='*.p' -zcpvf qemu.tar.gz \
-            ${{ env.BUILD_DIR }}/qemu-*arc*
+          tar --exclude='*.p' -zcpvf ${{ env.BUILD_DIR }}/qemu.tar.gz \
+          ${{ env.BUILD_DIR }}/qemu-*arc*
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
