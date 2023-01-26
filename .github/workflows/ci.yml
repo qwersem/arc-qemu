@@ -70,7 +70,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: qemu-${{ matrix.host.name }}.tar.gz
-          path: |
-            ${{ env.BUILD_DIR }}/qemu-*arc*
-            !${{ env.BUILD_DIR }}/*.p
+          path: ${{ env.BUILD_DIR }}/qemu.tar.gz
         if: ${{ always() }}
