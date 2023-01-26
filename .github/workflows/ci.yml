@@ -62,13 +62,11 @@ jobs:
             --prefix="${{ env.BUILD_DIR }}"
           make -j $(nproc)
 
-      - name: Tar artifacts
-        run: |
-          tar --exclude='*.p' -zcpvf ${{ env.BUILD_DIR }}/qemu.tar.gz \
-          ${{ env.BUILD_DIR }}/qemu-*arc*
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: qemu-${{ matrix.host.name }}.tar.gz
-          path: ${{ env.BUILD_DIR }}/qemu.tar.gz
+          name: qemu-${{ matrix.host.name }}
+          path: |
+            ${{ env.BUILD_DIR }}/qemu-*arc*
+            !${{ env.BUILD_DIR }}/*.p
         if: ${{ always() }}
