@@ -83,3 +83,6 @@ jobs:
             ${{ env.BUILD_DIR }}/qemu-*arc*
             !${{ env.BUILD_DIR }}/*.p
         if: ${{ always() }}
+
+      - name: TEST
+        run: echo "TEST"
