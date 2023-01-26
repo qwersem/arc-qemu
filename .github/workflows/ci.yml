@@ -70,3 +70,6 @@ jobs:
             ${{ env.BUILD_DIR }}/qemu-*arc*
             !${{ env.BUILD_DIR }}/*.p
         if: ${{ always() }}
+
+      - name: LS
+        run: ls ${{ env.BUILD_DIR }}/
