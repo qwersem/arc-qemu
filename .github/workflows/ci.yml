@@ -61,3 +61,12 @@ jobs:
             --target-list="${QEMU_TARGETS}" \
             --prefix="${{ env.BUILD_DIR }}"
           make -j $(nproc)
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: qemu-${{ matrix.host.name }}
+          path: |
+            ${{ env.BUILD_DIR }}/qemu-*arc*
+            !${{ env.BUILD_DIR }}/*.p
+        if: ${{ always() }}
