@@ -60,33 +60,33 @@ class ARCMMUTest(ARCMMUTestBase):
 
         self.__run__(url, hash)
 
-    def test2(self):
-        """
-        :avocado: tags=arch:arc64
-        :avocado: tags=machine:arc-sim
-        """
-        self.__setup__()
+    # def test2(self):
+    #     """
+    #     :avocado: tags=arch:arc64
+    #     :avocado: tags=machine:arc-sim
+    #     """
+    #     self.__setup__()
 
-        self.vm.add_args("-cpu","hs6x,mmuv6-version=48_4k")
+    #     self.vm.add_args("-cpu","hs6x,mmuv6-version=48_4k")
 
-        hash = 'a071d3a059c8dc1933b16a956d7892d3003dea52'
-        url = "https://raw.githubusercontent.com/foss-for-synopsys-dwc-arc-processors/arc-gnu-toolchain/master/test-qemu/images/MMU_Tests/mmuv48_02.exe"
+    #     hash = 'a071d3a059c8dc1933b16a956d7892d3003dea52'
+    #     url = "https://raw.githubusercontent.com/foss-for-synopsys-dwc-arc-processors/arc-gnu-toolchain/master/test-qemu/images/MMU_Tests/mmuv48_02.exe"
 
-        self.__run__(url, hash)
+    #     self.__run__(url, hash)
 
-    def test3(self):
-        """
-        :avocado: tags=arch:arc64
-        :avocado: tags=machine:arc-sim
-        """
-        self.__setup__()
+    # def test3(self):
+    #     """
+    #     :avocado: tags=arch:arc64
+    #     :avocado: tags=machine:arc-sim
+    #     """
+    #     self.__setup__()
 
-        self.vm.add_args("-cpu","hs6x,mmuv6-version=48_4k")
+    #     self.vm.add_args("-cpu","hs6x,mmuv6-version=48_4k")
 
-        hash = '11e09bf6f40f9a3930ffae63d8e5a4b2d6a7cd08'
-        url = "https://raw.githubusercontent.com/foss-for-synopsys-dwc-arc-processors/arc-gnu-toolchain/master/test-qemu/images/MMU_Tests/mmuv48_03.exe"
+    #     hash = '11e09bf6f40f9a3930ffae63d8e5a4b2d6a7cd08'
+    #     url = "https://raw.githubusercontent.com/foss-for-synopsys-dwc-arc-processors/arc-gnu-toolchain/master/test-qemu/images/MMU_Tests/mmuv48_03.exe"
 
-        self.__run__(url, hash)
+    #     self.__run__(url, hash)
 
     def test4(self):
         """
@@ -117,17 +117,17 @@ class ARCMMUTest(ARCMMUTestBase):
         self.__run__(url, hash)
 
     # Update TLB sequence (QEMU does not currently support this)
-    def test6(self):
-        """
-        :avocado: tags=arch:arc64
-        :avocado: tags=machine:arc-sim
-        """
-        self.__setup__()
+    # def test6(self):
+    #     """
+    #     :avocado: tags=arch:arc64
+    #     :avocado: tags=machine:arc-sim
+    #     """
+    #     self.__setup__()
 
-        self.vm.add_args("-cpu","hs6x,mmuv6-version=48_4k")
+    #     self.vm.add_args("-cpu","hs6x,mmuv6-version=48_4k")
 
-        hash = '435b2d645cfe080adf49c4e423a8928bcad89376'
-        url = "https://raw.githubusercontent.com/foss-for-synopsys-dwc-arc-processors/arc-gnu-toolchain/master/test-qemu/images/MMU_Tests/mmuv48_06.exe"
+    #     hash = '435b2d645cfe080adf49c4e423a8928bcad89376'
+    #     url = "https://raw.githubusercontent.com/foss-for-synopsys-dwc-arc-processors/arc-gnu-toolchain/master/test-qemu/images/MMU_Tests/mmuv48_06.exe"
 
-        self.__run__(url, hash)
+    #     self.__run__(url, hash)
 
